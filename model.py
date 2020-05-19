@@ -10,18 +10,14 @@ import bson
 import warnings
 from Geolocation import GeoLocation
 
-client = ""
-db =""
-model_nn =""
 REFRESH_TIME = 30 #in minutes
-def initialize():
-	global model_nn,client,db
-	# model_nn = load_model('model_nn_corrected.h5py')
-	url="mongodb+srv://dbuser:dbuser@cluster0-cw2oj.mongodb.net/test?retryWrites=true&w=majority"
-	client=MongoClient(url)
-	db = client.Pothole_Details
-	warnings.simplefilter("ignore")
-	# refreshPotholeInformation()
+
+# model_nn = load_model('model_nn_corrected.h5py')
+url="mongodb+srv://dbuser:dbuser@cluster0-cw2oj.mongodb.net/test?retryWrites=true&w=majority"
+client=MongoClient(url)
+db = client.Pothole_Details
+warnings.simplefilter("ignore")
+# refreshPotholeInformation()
 
 
 def storePoints(locationList):

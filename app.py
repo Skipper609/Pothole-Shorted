@@ -38,5 +38,4 @@ def connectionTest():
     return "<h1> App is up and running</h1>"
 
 if __name__ == "__main__":
-    m.initialize()
     app.run()
